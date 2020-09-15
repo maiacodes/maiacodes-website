@@ -1,6 +1,7 @@
 html, body, #app, #app>div {
     height: 100%;
-    background-color: #200f21;
+    /* background-color: #200f21; */
+    background: linear-gradient(#200f21,#382039) no-repeat center center fixed;
     color: white;
 }
 
