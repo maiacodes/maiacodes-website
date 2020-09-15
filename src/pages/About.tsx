@@ -6,7 +6,7 @@ export default function Page() {
     return (
         <div className={styles.pageContent}>
             <h1>📝 About my website</h1>
-            <p>This is my first project written in React</p>
+            <p>I'll write something here if I remember to.</p>
         </div>
     )
 }

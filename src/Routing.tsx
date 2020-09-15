@@ -13,6 +13,7 @@ import AboutPage from "./pages/About"
 import ProjectsPage from "./pages/Projects"
 import ContactPage from "./pages/Contact"
 import MenuPage from "./pages/Menu"
+import EekumBokum from "./pages/EekumBokum"
 
 // Comps
 import NavBar from './components/NavBar'
@@ -39,6 +40,9 @@ export default function App() {
           </Route>
           <Route exact path="/menu">
             <MenuPage />
+          </Route>
+          <Route exact path="/eekumbokum">
+            <EekumBokum />
           </Route>
           <Route path="*">
             <NoMatch />
