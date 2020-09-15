@@ -1,0 +1,41 @@
+.title {
+    font-family: 'Roboto Mono';
+    text-align: center;
+    font-size: 18px;
+}
+
+.column1{ float: left; width: 33.333%; }
+.column2{ float: right; width: 33.333%; }
+.column3{ display: inline-block; width: 33.333%; }
+
+.navbar {
+    align-content: center;
+    background-color: #382039;
+    display: flex;
+    margin-top: 0px;
+    padding: 10px;
+}
+
+.navigation:link, .navigation:visited, .navigation:active, .navigation {
+    font-family: 'Roboto Mono';
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+a {
+    color: white;
+    font-family: 'Roboto Mono';
+}
+
+.menu {
+    font-family: 'Roboto Mono';
+    text-align: right;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {display: none}
+    .menu {display: inline-flex; float: right;}
+}

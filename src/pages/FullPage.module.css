@@ -1,0 +1,23 @@
+.landingPage {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("/wave.svg"); */
+}
+
+.title {
+    font-family:'Roboto Mono';
+    color: #f638dc;
+    font-size: 400%;
+}
+.subtitle {
+    font-family:'Roboto Mono';
+    color: #f638dc;
+    font-size: 30px;
+}
+
+.centerContent {
+    display: block;
+    text-align: center;
+}
