@@ -1,16 +1,33 @@
-import React from 'react'
-import useSWR from 'swr'
-import BeatLoader from "react-spinners/BeatLoader";
+import React from 'react';
+import getMOTD from '../api/getMOTD';
+import BeatLoader from 'react-spinners/BeatLoader';
 
+export default class MOTD extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isLoading: true,
+			motd: null
+		};
+	}
 
-const fetcher = (...args) => fetch(...args).then(res => res.json())
+	render() {
+		const { isLoading, motd } = this.state;
+		//const data = getMOTD()
+		// if (error) return <p>404 - No subtitle found</p>
+		if (isLoading) {
+			return <BeatLoader color="#f638dc" size={15} />;
+		} else {
+			return <p>{motd}</p>;
+		}
+	}
 
-export default function MOTD() {
-        const { data, error } = useSWR('https://motd.maia.workers.dev', fetcher)
-        if (error) return <p>404 - No subtitle found</p>
-        if (!data) return <p><BeatLoader color="#f638dc" size={15}></BeatLoader></p>
-
-        // render data
-        console.log(`DATA: ${data}`)
-        return <p>{data.motd}</p>
+	async componentDidMount() {
+		const motd = await getMOTD();
+		console.log('Updated!' + motd);
+		this.setState({
+			isLoading: false,
+			motd
+		});
+	}
 }
