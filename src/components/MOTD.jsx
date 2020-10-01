@@ -13,8 +13,6 @@ export default class MOTD extends React.Component {
 
 	render() {
 		const { isLoading, motd } = this.state;
-		//const data = getMOTD()
-		// if (error) return <p>404 - No subtitle found</p>
 		if (isLoading) {
 			return <BeatLoader color="#f638dc" size={15} />;
 		} else {
